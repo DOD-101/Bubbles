@@ -1,5 +1,8 @@
 const cursor = document.getElementById("cursor");
 
+let lastX = 0;
+let lastY = 0;
+
 const diameter = 10;
 const borderWidth = 2;
 cursor.style.width = diameter + "px";
@@ -13,6 +16,11 @@ async function create_bubble(x, y, density) {
     return;
   }
 
+  const movementX = x - lastX;
+  const movementY = y - lastY;
+
+  lastX = x;
+  lastY = y;
 
   const bubble = document.createElement("div");
 
@@ -21,12 +29,12 @@ async function create_bubble(x, y, density) {
   const offsetX = Math.random() * 30 * (Math.random() < 0.5 ? -1 : 1);
   const offsetY = Math.random() * 30 * (Math.random() < 0.5 ? -1 : 1);
 
-  const r = Math.random() * 255;
-  const g = Math.random() * 255;
-  const b = Math.random() * 255;
-  const a = Math.random();
+  const r = Math.random() * (255 - 0) + 0;
+  const g = Math.random() * (255 - 0) + 0;
+  const b = Math.random() * (255 - 0) + 0;
+  const a = Math.random() * (1 - 0) + 0; // alpha must be between 0 and 1
 
-  const fade_t = Math.random() * (1 - 0.1) + 0.1;
+  const fade_t = Math.random() * (2 - 0.1) + 0.1;
 
 
   bubble.style.position = "absolute";
@@ -41,7 +49,7 @@ async function create_bubble(x, y, density) {
   document.body.appendChild(bubble);
 
   setTimeout(() => {
-    bubble.style.transform = 'scale(1.3)'
+    bubble.style.transform = `scale(1.3) translate(${movementX}px, ${movementY}px)`
   }, 5);
   setTimeout(() => {
     bubble.style.opacity = 0;
