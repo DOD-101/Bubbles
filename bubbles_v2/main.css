@@ -1,0 +1,13 @@
+body {
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+
+#cursor {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bubble {
+    position: absolute;
+}

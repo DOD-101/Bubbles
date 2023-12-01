@@ -1,0 +1,12 @@
+body {
+    background-color: aqua;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#canvas {
+    background-color: azure;
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+}
