@@ -10,9 +10,11 @@
 
 4. [bubbles v3 gs](#bubbles-v3-gs)
 
-5. [round cursor / canvas-round cursor](#round-cursor--canvas-round-cursor)
+5. [bubbles v3 p](#bubbles-v3-p)
 
-6. [Future plans](#future-plans)
+6. [round cursor / canvas-round cursor](#round-cursor--canvas-round-cursor)
+
+7. [Future plans](#future-plans)
 
 ## Bubbles v1
 
@@ -56,7 +58,7 @@ Third iteration, and currently the newest; it includes:
 
     - Ease of editing slightly improved
 
-USAGE: Recommended general usage
+USAGE: If you rather not have a bunch of parameters at the top of the file.
 
 ## Bubbles v3 gs
 
@@ -68,6 +70,16 @@ Based on v3, but:
     - Bubbles have a gradient
 
 USAGE: If you prefer the look of this over v3.
+
+## Bubbles v3 p
+
+p stands for: parameters
+
+Based on v3, but:
+
+    -everything is very easily customized using parameters (variables) at the top
+
+USAGE: Best for most cases.
 
 ## Round cursor / canvas-round cursor
 
@@ -81,4 +93,4 @@ using the non canvas option.
 ## Future Plans
 
 This is not a project I will be actively updating, only if someone finds a
-serious bug or I just feel like working on it.
+serious bug or I feel like working on it.

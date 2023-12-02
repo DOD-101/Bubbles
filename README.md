@@ -13,14 +13,18 @@ While credit is greatly appreciated it is by no means required.
 
 ## Different Versions
 
+For more information see the [docs](docs/index.md)
+
 - v1: Most Basic Version; not recommended for use
 
 - v2: Iteration on v1; good for use if movement of Bubbles isn't wanted
 
-- v3: Most recent Version; recommended for general use
+- v3: Most recent Version
 
-- v3_gs; Still somewhat WIP; adds a gradient to the bubbles and makes them first turn white then
+- v3_gs: Adds a gradient to the bubbles and makes them first turn white then
 disappear
+
+- v3 p; Best for most uses; has parameters at the top of the file to alow for easy customization
 
 - round cursor; Simply a round cursor, not directly related to the other snippets
 
