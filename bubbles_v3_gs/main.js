@@ -7,8 +7,8 @@ async function create_bubble(x, y, density) {
     return;
   }
 
-  const movementX = x - lastX;
-  const movementY = y - lastY;
+  const movementX = (x - lastX) * 1;
+  const movementY = (y - lastY) * 1;
 
   lastX = x;
   lastY = y;
