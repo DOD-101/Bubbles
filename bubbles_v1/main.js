@@ -1,12 +1,3 @@
-const cursor = document.getElementById("cursor");
-
-const diameter = 10;
-const borderWidth = 2;
-cursor.style.width = diameter + "px";
-cursor.style.height = diameter + "px";
-cursor.style.border = `${borderWidth}px black solid`;
-cursor.style.borderRadius = (diameter/2 + borderWidth) + "px";
-
 function create_bubble(x, y) {
   const bubble = document.createElement("div");
 
@@ -33,27 +24,6 @@ function create_bubble(x, y) {
   setTimeout(function() {bubble.remove();}, 500);
 }
 
-
-
-
-
-
-
-
-
-
 document.addEventListener("mousemove", function (e) {
-  cursor.style.left = (e.clientX - diameter / 2 - borderWidth) + "px";
-  cursor.style.top = (e.clientY - diameter / 2 - borderWidth) + "px";
   create_bubble(e.clientX - 10, e.clientY - 10);
 });
-
-document.addEventListener("mousedown", function () {
-  cursor.style.backgroundColor = "rgb(204,45,100)";
-});
-
-document.addEventListener("mouseup", function () {
-  cursor.style.backgroundColor = "rgba(0,0,0,0)";
-});
-
-

@@ -1,14 +1,5 @@
-const cursor = document.getElementById("cursor");
-
 let lastX = 0;
 let lastY = 0;
-
-const diameter = 10;
-const borderWidth = 2;
-cursor.style.width = diameter + "px";
-cursor.style.height = diameter + "px";
-cursor.style.border = `${borderWidth}px black solid`;
-cursor.style.borderRadius = (diameter/2 + borderWidth) + "px";
 
 async function create_bubble(x, y, density) {
 
@@ -35,6 +26,7 @@ async function create_bubble(x, y, density) {
   const b = Math.random() * (255 - 0) + 0;
   const a = Math.random() * (1 - 0) + 0; // alpha must be between 0 and 1
 
+  const prefade_t = Math.random() * (0.5 - 0.1) + 0.1;
   const fade_t = Math.random() * (2 - 0.1) + 0.1;
 
 
@@ -46,7 +38,7 @@ async function create_bubble(x, y, density) {
   bubble.style.left = x + offsetX + "px";
   bubble.style.top = y + offsetY + "px";
   bubble.style.borderRadius = diameter / 2 + "px";
-  bubble.style.transition = `opacity ${fade_t}s ease-out, transform ${fade_t + 0.5}s ease-out`;
+  bubble.style.transition = `opacity ${fade_t}s ease-out, transform ${prefade_t + fade_t}s ease-out`;
   document.body.appendChild(bubble);
 
   setTimeout(() => {
@@ -54,23 +46,11 @@ async function create_bubble(x, y, density) {
   }, 5);
   setTimeout(() => {
     bubble.style.opacity = 0;
-  }, 500);
+  }, prefade_t * 1000);
 
-  setTimeout(() => bubble.remove(), 500 + fade_t * 1000);
+  setTimeout(() => bubble.remove(), prefade_t * 1000 + fade_t * 1000);
 }
 
 document.addEventListener("mousemove", function (e) {
-  cursor.style.left = (e.clientX - diameter / 2 - borderWidth) + "px";
-  cursor.style.top = (e.clientY - diameter / 2 - borderWidth) + "px";
   create_bubble(e.clientX - 10, e.clientY - 10, 0.75);
 });
-
-document.addEventListener("mousedown", function () {
-  cursor.style.backgroundColor = "rgb(204,45,100)";
-});
-
-document.addEventListener("mouseup", function () {
-  cursor.style.backgroundColor = "rgba(0,0,0,0)";
-});
-
-
