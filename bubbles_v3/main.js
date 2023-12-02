@@ -7,7 +7,7 @@ const diameter = 10;
 const borderWidth = 2;
 cursor.style.width = diameter + "px";
 cursor.style.height = diameter + "px";
-cursor.style.border = `${borderWidth}px black solid`
+cursor.style.border = `${borderWidth}px black solid`;
 cursor.style.borderRadius = (diameter/2 + borderWidth) + "px";
 
 async function create_bubble(x, y, density) {
@@ -29,6 +29,7 @@ async function create_bubble(x, y, density) {
   const offsetX = Math.random() * 30 * (Math.random() < 0.5 ? -1 : 1);
   const offsetY = Math.random() * 30 * (Math.random() < 0.5 ? -1 : 1);
 
+  // rgba colors
   const r = Math.random() * (255 - 0) + 0;
   const g = Math.random() * (255 - 0) + 0;
   const b = Math.random() * (255 - 0) + 0;
@@ -49,7 +50,7 @@ async function create_bubble(x, y, density) {
   document.body.appendChild(bubble);
 
   setTimeout(() => {
-    bubble.style.transform = `scale(1.3) translate(${movementX}px, ${movementY}px)`
+    bubble.style.transform = `scale(1.3) translate(${movementX}px, ${movementY}px)`;
   }, 5);
   setTimeout(() => {
     bubble.style.opacity = 0;
@@ -64,12 +65,12 @@ document.addEventListener("mousemove", function (e) {
   create_bubble(e.clientX - 10, e.clientY - 10, 0.75);
 });
 
-document.addEventListener("mousedown", function (e) {
-  cursor.style.backgroundColor = "rgb(204,45,100)"
+document.addEventListener("mousedown", function () {
+  cursor.style.backgroundColor = "rgb(204,45,100)";
 });
 
-document.addEventListener("mouseup", function (e) {
-  cursor.style.backgroundColor = "rgba(0,0,0,0)"
+document.addEventListener("mouseup", function () {
+  cursor.style.backgroundColor = "rgba(0,0,0,0)";
 });
 
 
