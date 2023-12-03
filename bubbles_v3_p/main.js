@@ -24,8 +24,8 @@ const diameterRange = [50, 10];
 
 // Others
 
-const fadeRange = [2, 0.1]; // How long the bubbles takes to fade out
 const preFadeRange = [1, 0.5]; // Time before the bubble starts to fade out
+const fadeRange = [2, 0.1]; // How long the bubbles takes to fade out
 
 const density = 1;
 
