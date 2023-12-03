@@ -83,7 +83,7 @@ USAGE: Best for most cases.
 
 ## Round cursor / canvas-round cursor
 
-These were the first steps in the development mainly here for ideas
+These were the first steps in the development. Mainly here for ideas
 for other people.
 
 <u> Note on canvas-round cursor: </u> This is not recommended to be used
