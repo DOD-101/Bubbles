@@ -11,7 +11,7 @@ this means you need not look at / understand the code to customise it.
 // Colors
 
 const redRange = [255, 0];
-const greenRange = [255, 0];
+const greenRange = [0, 0];
 const blueRange = [255, 0];
 const alphaRange = [1, 0];
 
@@ -29,7 +29,7 @@ const fadeRange = [2, 0.1]; // How long the bubbles takes to fade out
 
 const density = 1;
 
-const movementMod = 10; // Increase or decrease the distance a bubble will move
+const movementMod = 5; // Increase or decrease the distance a bubble will move
 // #endregion
 
 
@@ -69,6 +69,7 @@ async function create_bubble(x, y, density) {
   const fade_t = Math.random() * (fadeRange[0] - fadeRange[1]) + fadeRange[1];
 
   bubble.style.position = "absolute";
+  bubble.style.pointerEvents = "none";
   bubble.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   bubble.style.opacity = a;
   bubble.style.height = diameter + "px";

@@ -31,6 +31,7 @@ async function create_bubble(x, y, density) {
 
 
   bubble.style.position = "absolute";
+  bubble.style.pointerEvents = "none";
   bubble.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   bubble.style.opacity = a;
   bubble.style.height = diameter + "px";

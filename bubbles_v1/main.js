@@ -13,6 +13,7 @@ function create_bubble(x, y) {
 
 
   bubble.style.position = "absolute";
+  bubble.style.pointerEvents = "none";
   bubble.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
   bubble.style.height = diameter + "px";
   bubble.style.width = diameter + "px";
