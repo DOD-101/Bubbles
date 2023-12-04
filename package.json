@@ -1,6 +1,6 @@
 {
   "name": "bubbles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of \"bubble\" effects around your mouse.",
   "main": "index.js",
   "scripts": {
